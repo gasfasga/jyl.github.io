@@ -1,0 +1,220 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 16px/1.5 'Titillium Web', sans-serif;
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  color: #3c3f64;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+h1{
+	font-size: 24px;
+}
+h6{
+    color:white;
+    font-size: 24px;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff00de, 0 0 7px #ff00de, 0 0 8px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
+  }
+
+  h6#fire {
+    text-align: center;
+    margin: 20px auto;
+    font-family: "League-Gothic", Courier;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 0 2px #fefcc9, 1px -1px 3px #feec85, -2px -2px 4px #ffae34, 2px -4px 5px #ec760c, -2px -6px 6px #cd4606, 0 -8px 7px #973716, 1px -9px 8px #451b0e;
+  }
+#slidebox{
+	width:auto;height:100%;
+	overflow:hidden;
+	
+	
+	position:fixed;
+	left:0;bottom:0px;
+	
+}
+#typing{
+	position: absolute;
+	top: 17%;
+	left: 20%;
+}
+
+.text-effect{
+	
+	color: #EAC100;
+	font-family: "楷体";
+	font-weight: ;
+	font-size: 80px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 8px;
+	margin: 0px auto 0;
+	animation: 4s animate infinite linear;
+}
+@keyframes animate{
+	0%{ text-shadow: 0 0 0 white; }
+	40%{
+		color: rgba(255,255,255,0);
+		text-shadow: 0 0 30px white;
+	}
+	70%{
+		color: rgba(255,255,255,0.4);
+		text-shadow: 0 0 10px white;
+	}
+	90%{
+		color: rgba(255,255,255,0.6);
+		text-shadow: 0 0 30px white;
+	}
+	100%{ text-shadow: 0 0 40px rgba(255,255,255,0); }
+}
+
+.mail{
+	z-index: -1;
+	height: 100%;
+	width: auto;
+}
+.rider{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	height: 300px;
+	width: 300px;
+}
+.worker{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	height: 300px;
+	width: 300px;
+}
+.player{
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 300px;
+	width: 300px;
+}
+.runner{
+	position: fixed;
+	right: 0;
+	top: 0;
+	height: 300px;
+	width: 300px;
+}
+.timeline ul li {
+	font-family: "微软雅黑";
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: #eee;
+}
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.timeline ul li div time {
+  position: absolute;
+  background: #f5af19;
+  width: 80px;
+  height: 30px;
+  top: -15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.timeline ul li div div {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timeline ul li div div p {
+  text-align: center;
+}
+.timeline ul li div .discovery {
+  margin-right: 10px;
+}
+.timeline ul li:nth-of-type(odd) > div {
+  left: 45px;
+}
+.timeline ul li:nth-of-type(even) > div {
+  left: -439px;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.timeline ul li:nth-of-type(odd) div {
+  transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+.timeline ul li:nth-of-type(even) div {
+  transform: translate3d(-100px, -10px, 0) rotate(10deg);
+}
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+    flex-direction: column;
+  }
+  .timeline ul li div div {
+    width: 80%;
+    margin: 10px;
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: -289px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background: #8bfff4;
+  }
+
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: 45px;
+  }
+}
+
+#container{width:100%; height: 100%; position:fixed;z-index: 999;top: 0px;left: 0px;font-family:幼圆;}

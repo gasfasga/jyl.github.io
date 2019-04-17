@@ -1,0 +1,427 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>给冀禹林的20岁生日礼物</title>
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body oncontextmenu=self.event.returnValue=false onselectstart="return false">
+	<audio autoplay="" loop=""><source src="assets/2.mp3"></audio>
+		<img class="worker" src="assets/worker.png" />
+		<img class="rider" src="assets/rider.png" />
+		<img class="player" src="assets/player.png" />
+		<img class="runner" src="assets/runner.png" />
+		<div class="text-effect">
+	<span>回首过去，展望未来</span>
+</div>
+
+<section class="timeline">
+	
+	<div id="container"></div>		
+
+<script src="js/collision.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+function rand(m,n){return m+parseInt((n-m)*Math.random());}
+var says=['天道酬勤','从善如流','坚持不懈','天下无敌','戒骄戒躁','万事胜意','来日方长','无所畏惧','严于律己','自强不息','学无止境','只争朝夕'];
+var saysLength=says.length;
+var oC=document.getElementById('container');
+var mxwidth=oC.offsetWidth;
+var mxheight=oC.offsetHeight;
+
+
+var oB=new BallBox('container');
+oB.ballRun();
+for(var i=0;i<15;i++){
+	var b=rand(40,60);
+	var x=rand(b,mxwidth-b);
+	var y=rand(b,mxheight-b);
+	var ball=new Ball({
+		'b':b,
+		'x':x,
+		'y':y,
+		'sx':rand(1,4),
+		'sy':rand(1,4),
+		'c':'url(img/paopao'+rand(1,6)+'.png)',
+		'opa':rand(60,100)/100,
+		'callBack':function(n){
+			//this.setB(rand(30,50));
+			//this.setM();
+			this.setOpa(rand(60,100)/100);
+			if(n%3==0){this.setC('url(img/paopao'+rand(1,6)+'.png)')};//撞三次改变下图片
+			if(n%50==0){
+				this.setB(rand(40+parseInt((n>1000?1000:n)/50),60+parseInt((n>1000?1000:n)/50)));
+			}//撞50次改大小
+			this.setHTML(says[rand(0,saysLength)]);
+		}
+	});
+	oB.addBall(ball);
+}
+</script>
+
+
+    <ul>
+        <li>
+            <div>
+                <time>1999.04</time>
+                <div class="discovery">
+                    <h1>生日</h1>
+                    <p>
+                        
+                    </p>
+                </div>
+                <div class="scientist">
+                    
+                    <span>你好奇地来到世上</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2016.09</time>
+                <div class="discovery">
+                    <h1>朋友</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>人之相知,贵在知心</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2017.03</time>
+                <div class="discovery">
+                    <h1>春分催人醒</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>春风吹人醒</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2017.06</time>
+                <div class="discovery">
+                    <h1>高考</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>人生中最大的挫折</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2017.06</time>
+                <div class="discovery">
+                    <h1>绵山</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>第一次同游</span>
+                </div>
+            </div>
+        </li><li>
+            <div>
+                <time>2017.09</time>
+                <div class="discovery">
+                    <h1>告别</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>憧憬与约定</span>
+                </div>
+            </div>
+        </li><li>
+            <div>
+                <time>2017.09</time>
+                <div class="discovery">
+                    <h1>上大学</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>世界这么大，你想去看看</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2017.12</time>
+                <div class="discovery">
+                    <h1>第一次献血</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>经历了死亡的恐惧</span>
+                </div>
+            </div>
+        </li><li>
+            <div>
+                <time>2018.01</time>
+                <div class="discovery">
+                    <h1>答题赚钱</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>走上发家致富之路</span>
+                </div>
+            </div>
+        </li><li>
+            <div>
+                <time>2018.04</time>
+                <div class="discovery">
+                    <h1>第一个生日礼物</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>技艺不精的船长的炸药桶</span>
+                </div>
+            </div>
+        </li><li>
+            <div>
+                <time>2018.04</time>
+                <div class="discovery">
+                    <h1>脚伤</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>伤筋动骨一百天</span>
+                </div>
+            </div>
+        </li><li>
+            <div>
+                <time>2018.05</time>
+                <div class="discovery">
+                    <h1>第一次演讲</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>紧张与兴奋</span>
+                </div>
+            </div>
+        </li><li>
+            <div>
+                <time>2018.06</time>
+                <div class="discovery">
+                    <h1>一年半来第一次刮胡子</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>是时候做出改变了</span>
+                </div>
+            </div>
+        </li><li>
+            <div>
+                <time>2018.06</time>
+                <div class="discovery">
+                    <h1>世界杯</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>球迷与伪球迷的一场狂欢</span>
+                </div>
+            </div>
+        </li><li>
+            <div>
+                <time>2018.08</time>
+                <div class="discovery">
+                    <h1>静如书生动如莽夫</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>我把想开公众号的想法第一个告诉你</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2018.09</time>
+                <div class="discovery">
+                    <h1>艾克海报</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>时间不在于你拥有多少，而在于你怎样使用</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2018.10</time>
+                <div class="discovery">
+                    <h1>清华与如家</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>一个注定让你难忘的女生</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2019.01</time>
+                <div class="discovery">
+                    <h1>元旦</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>巨轮，明天会更好</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2019.02</time>
+                <div class="discovery">
+                    <h1>安金梧桐府</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>两个人生活在一个屋子里的独特体验</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2019.02</time>
+                <div class="discovery">
+                    <h1>搬出去住</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>大学生活的重要转折点</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2019.03</time>
+                <div class="discovery">
+                    <h1>南京之行</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>又是一段难忘的经历</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2019.04</time>
+                <div class="discovery">
+                    <h1>很累</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>你说你快要被繁琐的事情压垮</span>
+                </div>
+            </div>
+        </li>      
+        <li>
+            <div>
+                <time>2019.04</time>
+                <div class="discovery">
+                    <h1>奔三</h1>
+                    
+                </div>
+                <div class="scientist">
+                    
+                    <span>愿你从今天开始，整理行装，继续前行，能有一个灿烂的前程</span>
+                </div>
+            </div>
+        </li>      
+    </ul>
+</section>
+<div style="height:100px;"></div>
+<div id="last"></div>
+<div id="slidebox">
+	<img src="assets/mail.jpg" class="mail"/>
+	<div id="typing" >
+	<h6>致冀禹林：</h6>
+
+<h6 id="fire">愿你双手时时忙碌 </h6>
+<h6 id="fire">愿你步履时时轻盈 </h6>
+<h6 id="fire">每当风向转变  </h6>
+<h6 id="fire">愿你总能守得住、站得稳  </h6>
+<h6 id="fire">愿你时时满心欢喜 </h6>
+<h6 id="fire">愿你歌声传唱不歇 </h6>
+<h6 id="fire">愿你永远年少  </h6>
+	</div>
+	
+</div>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(window).scroll(function(){
+	
+		var distanceTop = $('#last').offset().top - $(window).height();
+	
+		if($(window).scrollTop() > distanceTop){
+			$('#slidebox').animate({'marginLeft':'0px'},300);
+		}else{ 
+			$('#slidebox').stop(true).animate({'marginLeft':'-48%'},100);
+		}
+				
+	});
+	
+	$('#slidebox .close').bind('click',function(){
+		$(this).parent("#slidebox").stop(true).animate({'marginLeft':'-430px'},100);
+	});
+});
+</script>
+
+
+<script>
+var items = document.querySelectorAll(".timeline li");
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      if(!items[i].classList.contains("in-view")){
+        items[i].classList.add("in-view");
+      }
+    } else if(items[i].classList.contains("in-view")) {
+        items[i].classList.remove("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+</script>
+
+</body>
+</html>
